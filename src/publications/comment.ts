@@ -114,7 +114,7 @@ const createComment = async () => {
   console.log('create comment: tx hash', tx.hash);
 
   console.log('create comment: poll until indexed');
-  const indexedResult = await pollUntilIndexed(tx.hash);
+  const indexedResult = await pollUntilIndexed({txHash: tx.hash});
 
   console.log('create comment: profile has been indexed');
 
